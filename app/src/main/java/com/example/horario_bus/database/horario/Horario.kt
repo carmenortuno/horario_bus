@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "horario_bus")
 data class Horario (
-    @PrimaryKey val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     @ColumnInfo(name="nombre_parada") val stopName: String,
     @ColumnInfo(name="hora_llegada") val arrivalTime: Int
 )
